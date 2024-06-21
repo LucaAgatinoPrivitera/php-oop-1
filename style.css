@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(31, 30, 30);
+}
+.container{
+    padding-left: 10rem;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

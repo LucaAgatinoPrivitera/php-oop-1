@@ -1,10 +1,26 @@
 <?php
-class ‘Movie’
+class Movie
 {
     public $nome;
     public $regista;
     public $durata;
+
+    public function filmERegista()
+    {
+        return "$this->nome, $this->regista";
+    }
+
+    function __construct($nome, $regista, $durata)
+    {
+        $this->nome = $nome;
+        $this->regista = $regista;
+        $this->durata = $durata;
+    }
 }
+
+$singleMovie = new Movie("The Thing", "Carpenter", "1h 49m");
+$singleMovie1 = new Movie("Halloween", "Carpenter", "1h 31m");
+
 
 
 ?>
@@ -18,7 +34,17 @@ class ‘Movie’
 </head>
 
 <body>
-<h1>ciao</h1>
+    <h1>ciao</h1>
+    <ul>
+
+    <li>
+        <?php echo $singleMovie->filmERegista(); ?>, durata: <?php echo $singleMovie->durata; ?>
+    </li>
+    <li>
+        <?php echo $singleMovie1->filmERegista(); ?>, durata: <?php echo $singleMovie->durata; ?>
+    </li>
+
+    </ul>
 </body>
 
 </html>
